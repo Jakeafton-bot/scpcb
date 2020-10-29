@@ -13,7 +13,7 @@ Type Difficulty
 	Field customizable%
 End Type
 
-Dim difficulties.Difficulty(4)
+Dim difficulties.Difficulty(1)
 
 Global SelectedDifficulty.Difficulty
 
@@ -50,10 +50,10 @@ difficulties(KETER) = New Difficulty
 difficulties(KETER)\name = "Keter"
 difficulties(KETER)\description = "Keter-class objects are considered the most dangerous ones in Foundation containment. "
 difficulties(KETER)\description = difficulties(KETER)\description +"The same can be said for this difficulty level: the SCPs are more aggressive, and you have only one life - when you die, the game is over. "
-difficulties(KETER)\permaDeath = True
-difficulties(KETER)\aggressiveNPCs = True
+difficulties(KETER)\permaDeath = False
+difficulties(KETER)\aggressiveNPCs = False
 difficulties(KETER)\saveType = SAVEONQUIT
-difficulties(KETER)\otherFactors = HARD
+difficulties(KETER)\otherFactors = Normal
 difficulties(KETER)\r = 200
 difficulties(KETER)\g = 0
 difficulties(KETER)\b = 0
@@ -61,7 +61,7 @@ difficulties(KETER)\b = 0
 difficulties(CUSTOM) = New Difficulty
 difficulties(CUSTOM)\name = "Custom"
 difficulties(CUSTOM)\permaDeath = False
-difficulties(CUSTOM)\aggressiveNPCs = True
+difficulties(CUSTOM)\aggressiveNPCs = False
 difficulties(CUSTOM)\saveType = SAVEANYWHERE
 difficulties(CUSTOM)\customizable = True
 difficulties(CUSTOM)\otherFactors = EASY
